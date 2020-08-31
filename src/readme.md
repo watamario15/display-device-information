@@ -1,24 +1,24 @@
-# Display Device Information  Ver. 1.01 �\�[�X�R�[�h
-�R���s���[�^�[�ɐڑ����ꂽ�S�ẴA�N�e�B�u���j�^�[�̊e�����\�����܂��B
-[������肷��u���O : �f�B�X�v���C�̕����I�ȃT�C�Y���擾����](http://jag5.dreamlog.jp/archives/7949249.html)�ɋL�ڂ̃R�[�h���x�[�X�ɂ��Ă��܂��B
+# Display Device Information  Ver. 1.01 ソースコード
+コンピューターに接続された全てのアクティブモニターの各種情報を表示します。
+[ゆっくりするブログ : ディスプレイの物理的なサイズを取得する](http://jag5.dreamlog.jp/archives/7949249.html)に記載のコードをベースにしています。
 
-# �r���h���̗v��
-���̃v���W�F�N�g�́A**Visual Studio Enterprise 2019**�ō쐬����Ă��܂��B
+# ビルド時の要件
+このプロジェクトは、**Visual Studio Enterprise 2019**で作成されています。
 
-�܂��A��������L���邽�߂� **Windows XP���T�|�[�g�����r���h�Z�b�g(v141_xp)** ���g�p���Ă���ق��A**ARM,ARM64**���L�������Ă��܂��B�����̃r���h�Z�b�g�͕ʓr�C���X�g�[�����s��Ȃ��Ǝg�p�ł��܂���B�C���X�g�[������Ă��Ȃ���ΊJ�����Ƃ��ɋ��߂���̂ŁA **"�s�����Ă���v���O�C���̃C���X�g�[��"** �̂悤�Ȏ|�̍��ڂ��N���b�N���ăC���X�g�[�����Ă��������B
+また、動作環境を広げるために **Windows XPがサポートされるビルドセット(v141_xp)** を使用しているほか、**ARM,ARM64**も有効化しています。これらのビルドセットは別途インストールを行わないと使用できません。インストールされていなければ開いたときに求められるので、 **"不足しているプラグインのインストール"** のような旨の項目をクリックしてインストールしてください。
 
-�C���X�g�[���ł��Ȃ����ł��A�ȉ��̎菇��Windows XP�T�|�[�g����������΃r���h�\�ł��B�Ȃ��AARM,ARM64�p�̃r���h�c�[�����Ȃ��Ă�**x64,Win32�ł̃r���h�͉\**�ł��B
+インストールできない環境でも、以下の手順でWindows XPサポートを解除すればビルド可能です。なお、ARM,ARM64用のビルドツールがなくても**x64,Win32版のビルドは可能**です。
 
->**�f�o�b�O->(�v���W�F�N�g��)�̃v���p�e�B->�\���v���p�e�B** ��\�������A**�㕔��"�v���b�g�t�H�[��"��"���ׂẴv���b�g�t�H�[��"�ɐ؂�ւ���**�B���̏�ŁA�ȉ��̍��ڂ�ύX����B
+>**デバッグ->(プロジェクト名)のプロパティ->構成プロパティ** を表示させ、**上部の"プラットフォーム"を"すべてのプラットフォーム"に切り替える**。その上で、以下の項目を変更する。
 >
->- **�S��->�v���b�g�t�H�[�� �c�[���Z�b�g** �� **"Visual Studio 2019 (v142)"** �ɕύX��
->- ��UOK�������ĕ��A�ēx�������ڂ�\��������B
->- **�S��->Windows SDK �o�[�W����** �� **"10.0 (�ŐV�̃C���X�g�[������Ă���o�[�W����)"** �ɕύX��
->- **C/C++->����->�������[�h** �� **"�͂�"** �ɕύX
+>- **全般->プラットフォーム ツールセット** を **"Visual Studio 2019 (v142)"** に変更※
+>- 一旦OKを押して閉じ、再度同じ項目を表示させる。
+>- **全般->Windows SDK バージョン** を **"10.0 (最新のインストールされているバージョン)"** に変更※
+>- **C/C++->言語->準拠モード** を **"はい"** に変更
 
-��2020�N8�����݂�Visual Studio 2019�ɂ�����ݒ�ł��BVisual Studio 2017�Ȃǂ̌Â��o�[�W��������V�����o�[�W�����ł��A�\�����ꂽ�I�v�V�����̒��ōŐV�̂��̂�I������Α��v�Ȃ͂��ł��B
+※2020年8月現在のVisual Studio 2019における設定です。Visual Studio 2017などの古いバージョンやより新しいバージョンでも、表示されたオプションの中で最新のものを選択すれば大丈夫なはずです。
 
-# ����
-�\�[�X�R�[�h�́Afirsttest�t�H���_����1.cpp�ł��B
+# 注釈
+ソースコードは、**firsttest**フォルダ内の**1.cpp**です。
 
-���s�\�o�C�i���́Ax86(32bit)��**Win32**�Ax86(64bit)��**x64**�AARM(32bit)��**ARM**�AARM(64bit)��**ARM64**�t�H���_�́A**Debug**�t�H���_�Ƀf�o�b�O�r���h�A**Release**�t�H���_�Ƀ����[�X�r���h�� **DDI_(�Ώ�CPU�A�[�L�e�N�`����).exe** �Ƃ��Đ�������܂��B
+実行可能バイナリは、x86(32bit)は**Win32**、x86(64bit)は**x64**、ARM(32bit)は**ARM**、ARM(64bit)は**ARM64**フォルダの、**Debug**フォルダにデバッグビルド、**Release**フォルダにリリースビルドが **DDI_(対象CPUアーキテクチャ名).exe** として生成されます。
