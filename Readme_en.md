@@ -1,4 +1,6 @@
 # Display Device Information Readme
+この文書には[日本語版](Readme.md)もあります。
+
 This software tells you your every active display device's information. Multi-display environments are also supported.
 
 I made this software based on [this website](http://jag5.dreamlog.jp/archives/7949249.html).
