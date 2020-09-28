@@ -1,4 +1,6 @@
 # ディスプレイデバイス情報 Readme
+This document is also available in [English](Readme_en.md).
+
 コンピューターに接続された全てのアクティブモニターの各種情報を表示します。
 
 [ゆっくりするブログ : ディスプレイの物理的なサイズを取得する](http://jag5.dreamlog.jp/archives/7949249.html)に記載のコードをベースにしています。

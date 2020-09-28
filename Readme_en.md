@@ -1,4 +1,6 @@
 # Display Device Information Readme
+この文書には[日本語版](Readme.md)もあります。
+
 This software tells you your every active display device's information. Multi-display environments are also supported.
 
 I made this software based on [this website](http://jag5.dreamlog.jp/archives/7949249.html).
@@ -20,7 +22,7 @@ You can get executable files at "**Releases**". Then, please use one that matche
 You don't need to install this software. Please run the executable file directly. You can also uninstall by just deleting the file. This software doesn't use registry or such.
 
 # About source codes
-Source codes are in "**src**". Please refer to the readmes in each project folder.
+The source code is in "**src**". Please refer to the readme in the project folder.
 
 # Notes
 **THE AUTHOR OF THIS SOFTWARE WILL NOT TAKE ANY RESPONSIBILITY FOR ANY DAMAGES BY USING THIS SOFTWARE.**
