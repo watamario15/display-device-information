@@ -1,40 +1,46 @@
-# ディスプレイデバイス情報 Readme
-This document is also available in [English](Readme_en.md).
+# Display Device Information Readme
 
-コンピューターに接続された全てのアクティブモニターの各種情報を表示します。
+この文書には[日本語版](Readme_JA.md)もあります。
 
-[ゆっくりするブログ : ディスプレイの物理的なサイズを取得する](http://jag5.dreamlog.jp/archives/7949249.html)に記載のコードをベースにしています。
+![](image.png)
 
-# 動作要件
-**Microsoft Windows XP Service Pack 3** 以降(IA-32/AMD64/AArch32/AArch64)
+This software tells you your every active display device's information. Multi-display environments are also supported. I made this software based on [this website](http://jag5.dreamlog.jp/archives/7949249.html).
 
-# 実行手順
-**Releases** から取得できる以下の実行ファイルの中から、ご使用のコンピュータに合ったものを実行してください。メッセージボックスの形で結果が表示されます。
+## System Requirements
 
-|        ファイル名          | 対象コンピュータ |
-|:--------------------------:|:----------------:|
-|       DDI_IA-32.exe        |   32ビット(x86)  |
-|       DDI_AMD64.exe        |   64ビット(x86)  |
-|      DDI_AArch32.exe       |   32ビット(ARM)  |
-|      DDI_AArch64.exe       |   64ビット(ARM)  |
+**Windows 2000 SP4 or later** (IA-32/AMD64/AArch32/AArch64)
 
-# インストール・アンインストールについて
-このソフトウェアはインストール不要です。削除も、そのまま実行ファイルを削除するだけで大丈夫です。レジストリなどは使用していません。
+## How to run
 
-# ソースコードについて
-ソースコードは、**src** にあります。ビルド方法などは **src** 内のreadmeを参照してください。
+You can get executable files at "**Releases**". Then, please use one that matches your computer. The results will be displayed on a message box.
 
-# 使用上の注意
-**製作者は、このプログラムの利用によって生じた、いかなる損害についても責任を負いません。**
+|   File Name   | Target Computer |
+| :-----------: | :-------------: |
+|  ddi-32.exe   |   x86 32-bit    |
+|  ddi-64.exe   |   x86 64-bit    |
+| ddi-arm32.exe |   Arm 32-bit    |
+| ddi-arm64.exe |   Arm 64-bit    |
 
-# 著作権情報など
-このソフトウェアは[ゆっくりするブログ : ディスプレイの物理的なサイズを取得する](http://jag5.dreamlog.jp/archives/7949249.html)に記載されているコードに独自の機能を追加する形で制作しました。
+## How to install / uninstall
 
-私が追加した部分に関しては著作権を放棄しますが、**出典サイトの方は著作権を放棄していない可能性があることに注意してください**。
+Just run an executable file directly. No installation needed. You can also uninstall it by just deleting the executable file. This software doesn't use registry or such.
 
-# 変更履歴
-## v1.01 (2020/8/30)
-ソースコードを見直し、若干の効率化を図った。
+## About source codes
 
-## v1 (2019/4/5)
-初回リリース
+This project is for **Visual Studio 2022**.
+
+This project supports **ARM and ARM64**, and you must install build sets for them to build for them. Visual Studio will prompt you to install them if you haven't. You can still build for x64 and Win32 without ARM or ARM64 build sets.
+
+You can also use MinGW_w64 instead. To do so, run `win.sh` or `win.bat` with the PATH correctly set.
+
+The source code is "**main.cpp**", the resource script is "**resource.rc**", and the icon is "**app.ico**". You can edit and build by opening "**PrimeFactorization.sln**" in Visual Studio.
+
+Executable binary files will be generated in the "**Release / Debug**" folder in "**Win32**" for x86 32-bit, "**x64**" for x86 64-bit, "**ARM**" for Arm 32-bit, and "**ARM64**" for Arm 64-bit. The "**Release**" folder is for release builds, and "**Debug**" folder is for debug builds.
+
+## Notes
+
+**THE AUTHOR OF THIS SOFTWARE WILL NOT TAKE ANY RESPONSIBILITY FOR ANY DAMAGES CAUSED BY THIS SOFTWARE.**
+
+## Rights
+
+I made this software by adding some new content to a program provided on [this website](http://jag5.dreamlog.jp/archives/7949249.html). I waive copyright on the parts I added, but please be noted that **the original author still holds copyrights for what they developed**.

@@ -1,0 +1,13 @@
+# Visual Studio
+/.vs/
+/.vscode/
+/ARM/
+/ARM64/
+/Win32/
+/x64/
+/*.user
+
+# Build Artifacts
+/*.exe
+/*.aps
+/*.o

@@ -1,0 +1,50 @@
+#include <windows.h>
+
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+
+//
+// Version Information
+//
+
+VS_VERSION_INFO    VERSIONINFO
+FILEVERSION        1, 1, 0, 0
+FILEFLAGSMASK      VS_FFI_FILEFLAGSMASK
+FILEFLAGS          0
+FILEOS             VOS_NT_WINDOWS32
+FILETYPE           VFT_APP
+{
+  BLOCK "StringFileInfo"
+  {
+    BLOCK "040904b0"
+    {
+      VALUE "CompanyName",      "watamario15 (https://github.com/watamario15)\0"
+      VALUE "FileDescription",  "This program tells you your display device's information. Multi-display environments are also supported.\0"
+      VALUE "FileVersion",      "v1.1\0"
+      VALUE "InternalName",     "ddi-<architecture>.exe\0"
+      VALUE "LegalCopyright",   "Public Domain\0"
+      VALUE "OriginalFileName", "ddi-<architecture>.exe\0"
+      VALUE "ProductName",      "Display Device Information\0"
+      VALUE "ProductVersion",   "v1.1\0"
+    }
+  }
+  BLOCK "VarFileInfo"
+  {
+    VALUE "Translation", 0x409, 1200
+  }
+}
+
+
+//
+// Icon
+//
+
+icon ICON "app.ico"
+
+
+//
+// Manifest (high DPI and common controls version 6)
+//
+
+#ifndef NOMANIFEST
+1 MANIFEST app.manifest
+#endif
